@@ -1,0 +1,43 @@
+[Unit]
+Description=BuildWithAI — generator dokumen produk (API akun + berkas statis)
+Documentation=https://github.com/<akun-anda>/<nama-repo>
+After=network.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=buildwithai
+Group=buildwithai
+WorkingDirectory=/srv/buildwithai
+EnvironmentFile=/srv/buildwithai/.env
+ExecStart=/usr/bin/node server/index.js
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+KillSignal=SIGTERM
+
+# Batasi hak akses proses
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+# Folder tulis: basis data SQLite
+ReadWritePaths=/var/lib/buildwithai
+
+# Batas sumber daya
+LimitNOFILE=8192
+MemoryMax=512M
+TasksMax=256
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=buildwithai
+
+[Install]
+WantedBy=multi-user.target

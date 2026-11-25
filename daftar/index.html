@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar — BuildWithAI</title>
+  <meta name="description" content="Buat akun BuildWithAI untuk menyimpan riwayat paket dokumen produk Anda.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-ghost btn-sm" href="/masuk/">Masuk</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h1>Buat akun</h1>
+        <p class="auth-sub">
+          Akun dipakai untuk menyimpan kalimat ide dan riwayat paket dokumen.
+          Tidak ada email verifikasi dan tidak ada tagihan.
+        </p>
+
+        <form data-register-form novalidate>
+          <div class="field">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" required
+                   maxlength="80" placeholder="Nama Anda">
+            <span class="field-error" data-error-for="nama"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required
+                   inputmode="email" placeholder="nama@contoh.com">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="field">
+            <label for="password">Kata sandi</label>
+            <input type="password" id="password" name="password" autocomplete="new-password" required
+                   minlength="8" placeholder="Minimal 8 karakter, ada huruf dan angka">
+            <div class="strength" data-strength="0" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="field-hint" data-strength-label></span>
+            <span class="field-error" data-error-for="password"></span>
+          </div>
+
+          <div class="field field-check">
+            <label class="check">
+              <input type="checkbox" name="setuju">
+              <span>Saya mengerti kalimat ide dan judul dokumen saya disimpan di server untuk akun ini.</span>
+            </label>
+            <span class="field-error" data-error-for="setuju"></span>
+          </div>
+
+          <p class="form-error" data-form-error hidden></p>
+
+          <button class="btn btn-primary btn-block" type="submit">Buat akun</button>
+        </form>
+
+        <p class="auth-alt">
+          Sudah punya akun? <a class="tlink" href="/masuk/">Masuk</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Kata sandi disimpan sebagai hash scrypt, bukan teks biasa.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Bantuan</h4>
+          <a href="/panduan/#privasi">Privasi</a>
+          <a href="/panduan/#batasan">Batasan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

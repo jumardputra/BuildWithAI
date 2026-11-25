@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk — BuildWithAI</title>
+  <meta name="description" content="Masuk ke akun BuildWithAI untuk menyimpan dan membuka kembali paket dokumen produk Anda.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-ghost btn-sm" href="/panduan/">Panduan</a>
+        <a class="btn btn-primary btn-sm" href="/daftar/">Daftar</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h1>Masuk</h1>
+        <p class="auth-sub">
+          Masuk untuk menyimpan paket dokumen dan membukanya lagi kapan saja.
+          Membuat dokumen tetap bisa tanpa akun.
+        </p>
+
+        <form data-login-form novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required
+                   inputmode="email" placeholder="nama@contoh.com">
+            <span class="field-error" data-error-for="email"></span>
+          </div>
+
+          <div class="field">
+            <label for="password">Kata sandi</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" required
+                   placeholder="Kata sandi Anda">
+            <span class="field-error" data-error-for="password"></span>
+          </div>
+
+          <p class="form-error" data-form-error hidden></p>
+
+          <button class="btn btn-primary btn-block" type="submit">Masuk</button>
+        </form>
+
+        <p class="auth-alt">
+          Belum punya akun? <a class="tlink" href="/daftar/">Daftar gratis</a>
+        </p>
+        <p class="auth-note">
+          Lupa kata sandi? Saat ini pemulihan dilakukan lewat administrator server,
+          karena tidak ada email keluar. Lihat <a class="tlink" href="/panduan/#privasi">panduan privasi</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Penyusunan dokumen berjalan di peramban Anda. Akun hanya menyimpan judul dan kalimat ide.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Bantuan</h4>
+          <a href="/panduan/#privasi">Privasi</a>
+          <a href="/panduan/#batasan">Batasan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

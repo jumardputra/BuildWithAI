@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruang kerja — BuildWithAI</title>
+  <meta name="description" content="Berkas-berkas pendukung yang disusun dari kalimat idemu: PRD, sistem desain, arsitektur, basis data, API, roadmap, dan daftar tugas.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-ghost btn-sm" href="/panduan/">Panduan</a>
+        <span class="acct-slot" data-account-slot></span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <div class="wrap">
+      <div class="ws" data-workspace>
+        <aside class="ws-side" aria-label="Berkas hasil">
+          <div class="idea-strip" data-idea-strip></div>
+
+          <div>
+            <div class="panel-head">
+              <span>Berkas</span>
+              <span data-count>—</span>
+            </div>
+            <div class="file-list" role="tablist" aria-label="Daftar berkas" data-file-list></div>
+            <div class="side-actions">
+              <button class="btn btn-primary btn-sm" type="button" data-zip>Unduh semua (ZIP)</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-save>Simpan ke akun</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-copy-all>Salin semua berkas</button>
+              <button class="btn btn-quiet" type="button" data-shuffle>Pakai ide contoh lain</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel-head"><span>Ringkasan</span></div>
+            <div class="side-actions">
+              <div class="sum-row"><span>Total isi</span><b data-total-lines>—</b></div>
+              <div class="tag-row" data-tags></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="ws-main" aria-label="Isi berkas">
+          <div class="doc-bar">
+            <span class="path" data-path>docs</span>
+            <span class="dmeta" data-doc-meta></span>
+            <span class="spacer"></span>
+            <div class="tabs" role="tablist" aria-label="Tampilan">
+              <button class="tab" type="button" role="tab" data-view="rapi" aria-selected="true">Terbaca</button>
+              <button class="tab" type="button" role="tab" data-view="mentah" aria-selected="false">Mentah</button>
+            </div>
+            <button class="btn btn-quiet" type="button" data-copy aria-label="Salin berkas ini">Salin</button>
+            <button class="btn btn-quiet" type="button" data-download aria-label="Unduh berkas ini">.md</button>
+          </div>
+          <div class="doc-body" data-doc-body></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Semua berkas disusun di peramban Anda. Periksa bagian "pertanyaan terbuka" sebelum dipakai.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Produk</h4>
+          <a href="/">Beranda</a>
+          <a href="/template/">Contoh berkas</a>
+          <a href="/panduan/">Panduan</a>
+        </div>
+        <div class="foot-col">
+          <h4>Bantuan</h4>
+          <a href="/panduan/#memakai">Cara memakai paket</a>
+          <a href="/panduan/#privasi">Privasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource-variable/fraunces/opsz.css';
+
+/* ============================================================
+   BuildWithAI — sistem visual
+   Dunia: lembar bukti (proof sheet) di atas meja tinta gelap.
+   Huruf display Fraunces, teks UI sans, mono hanya untuk data.
+   ============================================================ */
+
+:root {
+  --ink: #080a0f;
+  --ink-2: #0d1017;
+  --sheet: #12151d;
+  --sheet-2: #171b24;
+  --rule: #262b36;
+  --rule-soft: #1b202a;
+  --paper: #f4f1ea;
+  --text: #ece9e2;
+  --text-2: #a8a49b;
+  --text-3: #726f68;
+  --accent: #ff5c20;
+  --accent-deep: #c94214;
+  --accent-wash: #ff5c201a;
+  --ok: #7fb069;
+  --warn: #e0a458;
+
+  --r: 3px;
+  --r-mid: 6px;
+  --wrap: 1120px;
+  --gutter: 24px;
+
+  --display: 'Fraunces Variable', 'Fraunces', ui-serif, Georgia, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'Cascadia Mono', 'SF Mono', Menlo, Consolas, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.62;
+  font-feature-settings: 'kern' 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* permukaan peramban — bagian yang tidak digambar tetap memakai palet */
+::selection { background: var(--accent); color: #140802; }
+:root { caret-color: var(--accent); accent-color: var(--accent); }
+
+* { scrollbar-width: thin; scrollbar-color: #333a47 var(--ink-2); }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: var(--ink-2); }
+::-webkit-scrollbar-thumb {
+  background: #333a47;
+  border: 3px solid var(--ink-2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: #454d5d; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+button { font: inherit; color: inherit; background: none; border: 0; }
+img { max-width: 100%; display: block; }
+
+/* Tipografi: display memakai serif variabel dengan sumbu optik besar */
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1, h2 {
+  font-family: var(--display);
+  font-variation-settings: 'opsz' 96, 'SOFT' 0, 'WONK' 0;
+  letter-spacing: -0.028em;
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 0.98; font-weight: 400; }
+h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 450; }
+h3, h4 { font-family: var(--sans); font-size: 1rem; font-weight: 650; letter-spacing: -0.01em; }
+
+.num { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+.skip:focus {
+  left: 16px;
+  top: 12px;
+  z-index: 60;
+  background: var(--accent);
+  color: #140802;
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--r);
+}
+
+/* ------------------------------------------------------------
+   Kepala: aturan rambut, bukan bilah kaca
+   ------------------------------------------------------------ */
+.site-head {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-head .wrap {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 62px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  flex: 0 0 auto;
+}
+
+.brand .mark {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #140802;
+  font-family: var(--display);
+  font-variation-settings: 'opsz' 40;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  border-radius: 2px;
+}
+
+.brand .sub {
+  color: var(--text-3);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  display: block;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.nav a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-2);
+  padding: 6px 11px;
+  border-radius: var(--r);
+  transition: color .15s ease, background .15s ease;
+}
+
+.nav a:hover { color: var(--text); }
+.nav a:hover { background: #ffffff0a; }
+
+.nav a[aria-current='page'] {
+  color: var(--text);
+  box-shadow: inset 0 -1px 0 var(--accent);
+  border-radius: 0;
+}
+
+.head-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+  margin-left: 8px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  background: var(--text);
+  position: relative;
+}
+.nav-toggle span::before, .nav-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.nav-toggle span::before { top: -4px; }
+.nav-toggle span::after { top: 4px; }
+
+/* ------------------------------------------------------------
+   Aturan tipografis bersama
+   ------------------------------------------------------------ */
+.lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 60ch;
+}
+
+.prose { max-width: 68ch; }
+.prose p { margin: 0 0 1em; color: var(--text-2); }
+.prose p:last-child { margin-bottom: 0; }
+.prose strong { color: var(--text); font-weight: 600; }
+
+.rule-row {
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px 28px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 12px;
+  margin-bottom: 26px;
+}
+
+.section-head h2 { max-width: 30ch; }
+.section-head .note {
+  font-size: 13px;
+  color: var(--text-3);
+  max-width: 38ch;
+  line-height: 1.55;
+}
+
+.section-pad { padding: 64px 0; }
+
+/* Tautan teks dengan garis bawah yang digeser */
+.tlink {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color .15s ease;
+}
+.tlink:hover { text-decoration-color: var(--accent); }

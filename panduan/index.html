@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panduan — BuildWithAI</title>
+  <meta name="description" content="Cara menulis ide yang baik, cara memakai paket dokumen di repositori, apa yang perlu diperiksa manusia, dan batasan alat ini.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-ghost btn-sm" href="/template/">Contoh berkas</a>
+        <span class="acct-slot" data-account-slot></span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <div class="wrap page-head">
+      <h1>Supaya hasilnya benar-benar terpakai</h1>
+      <p class="lead">
+        Alat ini menulis kerangka yang lengkap. Yang membuatnya berguna adalah koreksi Anda di atasnya:
+        target angka, istilah tim, dan keputusan yang tidak bisa ditebak dari satu kalimat.
+      </p>
+    </div>
+
+    <section class="guide-section" id="menulis">
+      <div class="wrap">
+        <h2>Cara menulis kalimat ide</h2>
+        <p>Satu kalimat cukup, asalkan memuat tiga hal: siapa penggunanya, benda apa yang dikelola, dan hasil yang diinginkan.</p>
+        <div class="two-col">
+          <div class="col-block">
+            <h3>Yang membantu</h3>
+            <code class="example-code">aplikasi kasir untuk warung kopi agar penjualan harian dan stok bahan tercatat</code>
+            <ul>
+              <li>Benda yang dikelola: penjualan, stok.</li>
+              <li>Penggunanya: warung kopi.</li>
+              <li>Hasil yang diinginkan: tercatat.</li>
+            </ul>
+          </div>
+          <div class="col-block">
+            <h3>Yang menyulitkan mesin</h3>
+            <code class="example-code">bikin aplikasi keren yang bisa dipakai semua orang</code>
+            <ul>
+              <li>Tidak ada benda yang dikelola, jadi tabel dan endpoint tidak bisa ditentukan.</li>
+              <li>Tidak ada pengguna sasaran, jadi alur tidak bisa disusun.</li>
+              <li>Tidak ada hasil, jadi metrik hanya berupa tebakan umum.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="u-mt-16 u-max-70ch">
+          Kalau kalimat Anda sangat umum, paket yang dihasilkan tetap bisa dipakai tetapi memakai isi kategori
+          "umum". Struktur berkasnya tetap benar, hanya saja bagian tabel dan fitur perlu Anda sesuaikan sendiri.
+        </p>
+      </div>
+    </section>
+
+    <section class="guide-section" id="memakai">
+      <div class="wrap">
+        <h2>Memakai paket di proyek nyata</h2>
+        <div class="two-col">
+          <div class="col-block">
+            <h3>Menyimpan di repositori</h3>
+            <p>Unduh ZIP, ekstrak, lalu pindahkan seluruh berkas ke folder <code class="u-code-inline">docs/</code> di proyek. Satu berkas satu topik, supaya riwayat perubahannya mudah ditinjau.</p>
+          </div>
+          <div class="col-block">
+            <h3>Menyerahkan ke pengembang</h3>
+            <p>Mulai dari PRD lalu tasks. Daftar tugas sudah dipecah per area dengan ukuran satu sesi kerja, jadi bisa dieksekusi berurutan tanpa menebak prioritas.</p>
+          </div>
+          <div class="col-block">
+            <h3>Menjaga tetap hidup</h3>
+            <p>Setiap perubahan lingkup ditulis ke PRD dan dicatat sebagai keputusan baru. Dokumen yang tidak diperbarui lebih berbahaya daripada tidak ada dokumen.</p>
+          </div>
+          <div class="col-block">
+            <h3>Menyesuaikan istilah</h3>
+            <p>Ganti nama tabel dan endpoint dengan istilah tim Anda. Yang penting bentuknya konsisten antar berkas, bukan namanya persis seperti contoh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="batasan">
+      <div class="wrap">
+        <h2>Batasan yang perlu diketahui</h2>
+        <div class="two-col">
+          <div class="col-block">
+            <h3>Tidak memanggil model bahasa</h3>
+            <p>Isi disusun dari paket pengetahuan domain dan templat di peramban Anda. Hasilnya konsisten dan cepat, tetapi tidak menciptakan wawasan baru tentang pasar atau pesaing.</p>
+          </div>
+          <div class="col-block">
+            <h3>Angka adalah usulan</h3>
+            <p>Semua target metrik dan estimasi waktu adalah titik awal yang wajar, bukan hasil pengukuran atau janji.</p>
+          </div>
+          <div class="col-block">
+            <h3>Tidak menggantikan tinjauan manusia</h3>
+            <p>Kepatuhan, pajak, dan pemrosesan data pribadi butuh pemeriksaan orang yang memahami aturannya di wilayah Anda.</p>
+          </div>
+          <div class="col-block">
+            <h3>Kategori terbatas</h3>
+            <p>Ada delapan paket domain. Ide di luar itu tetap mendapat struktur lengkap dengan isi kategori umum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="privasi">
+      <div class="wrap">
+        <h2>Privasi</h2>
+        <p>
+          Kalimat ide Anda tidak dikirim ke server mana pun. Penyusunan berkas, pengunduhan, dan pembuatan
+          ZIP semuanya terjadi di peramban. Kalimat ide hanya disimpan sementara di penyimpanan sesi
+          peramban supaya tidak perlu diketik ulang saat berpindah halaman, dan terhapus saat tab ditutup.
+          Tidak ada akun, tidak ada analitik pihak ketiga, tidak ada cookie pelacak.
+        </p>
+      </div>
+    </section>
+
+    <section class="guide-section" id="istilah">
+      <div class="wrap">
+        <h2>Istilah singkat</h2>
+        <div class="two-col">
+          <div class="col-block"><h3>PRD</h3><p>Product Requirements Document. Menyatakan masalah, pengguna, fitur berprioritas, dan apa yang tidak dikerjakan.</p></div>
+          <div class="col-block"><h3>Design system</h3><p>Kumpulan token dan komponen yang membuat tampilan konsisten: warna, huruf, jarak, keadaan tombol.</p></div>
+          <div class="col-block"><h3>ADR</h3><p>Architecture Decision Record. Catatan singkat satu keputusan: konteks, pilihan, konsekuensi.</p></div>
+          <div class="col-block"><h3>P0 / P1 / P2</h3><p>Prioritas. P0 wajib untuk rilis pertama, P1 penting setelahnya, P2 belum dijadwalkan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="cta-row">
+          <div>
+            <h2>Siap menyusun dokumen Anda?</h2>
+            <p>Satu kalimat sudah cukup untuk memulai.</p>
+          </div>
+          <a class="btn btn-primary" href="/#tulis">Tulis ide saya</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Alat bantu penyusunan dokumen produk. Semua pemrosesan berjalan di peramban Anda.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Panduan</h4>
+          <a href="#menulis">Menulis ide</a>
+          <a href="#memakai">Memakai paket</a>
+          <a href="#batasan">Batasan</a>
+        </div>
+        <div class="foot-col">
+          <h4>Produk</h4>
+          <a href="/">Beranda</a>
+          <a href="/ruang-kerja/">Ruang kerja</a>
+          <a href="/template/">Contoh berkas</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

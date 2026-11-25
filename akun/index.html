@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akun — BuildWithAI</title>
+  <meta name="description" content="Akun dan riwayat paket dokumen produk Anda.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <span class="acct-slot" data-account-slot></span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <div class="wrap" data-account>
+      <div class="page-head u-page-head-flush">
+        <h1 class="u-h1-sm">Akun Anda</h1>
+      </div>
+
+      <div class="auth-wrap u-gate" data-gate hidden>
+        <p class="lead u-mb-16">
+          Anda belum masuk. Riwayat dokumen hanya bisa dilihat setelah masuk.
+        </p>
+        <div class="gate-actions">
+          <a class="btn btn-primary" href="/masuk/?next=%2Fakun">Masuk</a>
+          <a class="btn btn-ghost" href="/daftar/">Buat akun</a>
+        </div>
+      </div>
+
+      <div data-account-body hidden>
+        <section class="acct-top">
+          <div class="acct-id">
+            <div class="acct-name" data-user-name>—</div>
+            <div class="acct-email" data-user-email>—</div>
+          </div>
+          <div class="acct-facts">
+            <div class="sum-row"><span>Terdaftar sejak</span><b class="num" data-user-since>—</b></div>
+            <div class="sum-row"><span>Dokumen tersimpan</span><b class="num" data-doc-count>0</b></div>
+          </div>
+          <div class="acct-actions">
+            <a class="btn btn-primary btn-sm" href="/#tulis">Susun dokumen baru</a>
+            <button class="btn btn-ghost btn-sm" type="button" data-logout>Keluar</button>
+          </div>
+        </section>
+
+        <section class="acct-docs">
+          <div class="panel-head"><span>Riwayat dokumen</span><span>terbaru dulu</span></div>
+          <div data-doc-list></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Isi berkas tidak disimpan di server, hanya kalimat ide dan judulnya.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Produk</h4>
+          <a href="/ruang-kerja/">Ruang kerja</a>
+          <a href="/">Beranda</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

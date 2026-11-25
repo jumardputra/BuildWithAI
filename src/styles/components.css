@@ -1,0 +1,413 @@
+/* ------------------------------------------------------------
+   Tombol: persegi, tegas, tanpa halo
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  border-radius: var(--r);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;
+  white-space: nowrap;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #140802;
+  border-color: var(--accent);
+}
+.btn-primary:hover { background: #ff6f38; border-color: #ff6f38; }
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--rule);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: #3d4553; background: #ffffff08; }
+
+.btn-quiet {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-2);
+  padding: 7px 10px;
+  font-size: 12.5px;
+  font-weight: 550;
+}
+.btn-quiet:hover { color: var(--text); background: #ffffff0d; }
+
+.btn-sm { padding: 7px 12px; font-size: 12.5px; }
+
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* Penanda: mono kecil, hanya untuk data teknis */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.01em;
+  color: var(--text-2);
+  border: 1px solid var(--rule);
+  padding: 2px 7px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.tag-accent { color: var(--accent); border-color: #ff5c2052; }
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* ------------------------------------------------------------
+   Hero: satu komposisi, bukan dua kolom templat
+   ------------------------------------------------------------ */
+.hero { padding: 56px 0 0; }
+
+.hero-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 22px;
+}
+
+.hero h1 { max-width: 20ch; }
+
+.hero h1 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 96, 'SOFT' 40, 'WONK' 1;
+  color: var(--accent);
+}
+
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  text-align: right;
+  flex: 0 0 auto;
+  padding-bottom: 6px;
+}
+
+.hero-aside .stamp {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-2);
+  font-variation-settings: 'opsz' 20;
+}
+
+.hero-aside .facts {
+  display: flex;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.hero-aside .facts b {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Baris isian: satu baris, bukan kartu mengambang */
+.composer {
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0 18px;
+}
+
+.composer form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.composer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.composer-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+}
+
+textarea.idea-input {
+  width: 100%;
+  min-height: 74px;
+  resize: vertical;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--text);
+  padding: 4px 0;
+  font-family: var(--display);
+  font-variation-settings: 'opsz' 32;
+  font-size: 1.22rem;
+  line-height: 1.5;
+  letter-spacing: -0.012em;
+  outline: none;
+}
+
+textarea.idea-input::placeholder { color: #575c66; font-style: italic; }
+
+.composer-side {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: stretch;
+  justify-content: flex-end;
+  padding-top: 26px;
+}
+
+.composer-side .btn { min-width: 168px; }
+
+.composer-meta {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--text-3);
+  text-align: right;
+}
+
+.samples {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 14px 0 34px;
+}
+
+.samples .lbl {
+  font-size: 11.5px;
+  color: var(--text-3);
+  margin-right: 2px;
+}
+
+.chip {
+  border: 1px solid var(--rule);
+  background: none;
+  color: var(--text-2);
+  border-radius: 2px;
+  padding: 4px 9px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color .14s ease, border-color .14s ease;
+}
+
+.chip:hover { color: var(--text); border-color: var(--accent); }
+
+/* ------------------------------------------------------------
+   Daftar berkas: baris bergaris, bukan kartu bertumpuk
+   ------------------------------------------------------------ */
+.bundle {
+  border-top: 1px solid var(--rule);
+}
+
+.bundle-head {
+  display: grid;
+  grid-template-columns: 2.1fr 1.4fr 0.6fr;
+  gap: 16px;
+  padding: 9px 0 9px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.bundle-row {
+  display: grid;
+  grid-template-columns: 2.1fr 1.4fr 0.6fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+  transition: color .14s ease;
+}
+
+.bundle-row:hover { color: var(--text); }
+
+.bundle-row .fn {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+
+.bundle-row .fn .lead-mark {
+  color: var(--accent);
+  font-size: 10px;
+  flex: 0 0 auto;
+}
+
+.bundle-row .fd { font-size: 12.5px; color: var(--text-3); }
+.bundle-row .fs {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--text-3);
+  text-align: right;
+}
+
+/* ------------------------------------------------------------
+   Langkah: kolom bergaris samping, tanpa nomor hiasan
+   ------------------------------------------------------------ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.step {
+  padding: 22px 24px 8px 0;
+  border-right: 1px solid var(--rule-soft);
+}
+.step:last-child { border-right: 0; padding-right: 0; }
+.step + .step { padding-left: 24px; }
+
+.step h3 { margin-bottom: 6px; }
+.step p { font-size: 13.5px; color: var(--text-2); line-height: 1.65; }
+
+/* ------------------------------------------------------------
+   Domain: indeks berkolom, bukan ubin
+   ------------------------------------------------------------ */
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 48px;
+}
+
+.index-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: baseline;
+  width: 100%;
+  text-align: left;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  cursor: pointer;
+  transition: color .14s ease;
+}
+
+.index-item .nm {
+  font-size: 14px;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.index-item .nm::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--rule-soft);
+  margin-bottom: 4px;
+}
+
+.index-item .ob {
+  font-size: 12px;
+  color: var(--text-3);
+  font-family: var(--mono);
+  white-space: nowrap;
+}
+
+.index-item:hover .nm { color: var(--accent); }
+
+/* ------------------------------------------------------------
+   Catatan / kutipan
+   ------------------------------------------------------------ */
+.note-block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 48px;
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+}
+
+.note-item { padding: 14px 0 18px; border-bottom: 1px solid var(--rule-soft); }
+.note-item h3 { margin-bottom: 5px; }
+.note-item p { font-size: 13.5px; color: var(--text-2); line-height: 1.65; }
+
+/* ------------------------------------------------------------
+   Ajakan penutup: satu baris tegas
+   ------------------------------------------------------------ */
+.cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--accent);
+  padding: 30px 0 0;
+}
+
+.cta-row h2 { max-width: 24ch; }
+.cta-row p { color: var(--text-2); font-size: 14px; margin-top: 6px; }
+
+/* ------------------------------------------------------------
+   Kaki
+   ------------------------------------------------------------ */
+.site-foot {
+  border-top: 1px solid var(--rule);
+  margin-top: 64px;
+  padding: 34px 0 28px;
+}
+
+.foot-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.foot-note {
+  color: var(--text-3);
+  font-size: 12px;
+  margin-top: 9px;
+  max-width: 34ch;
+  line-height: 1.6;
+}
+
+.foot-links { display: flex; gap: 44px; flex-wrap: wrap; }
+
+.foot-col h4 {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.foot-col a {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-2);
+  padding: 3px 0;
+}
+.foot-col a:hover { color: var(--accent); }

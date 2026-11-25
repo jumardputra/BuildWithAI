@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuildWithAI — dari satu kalimat ide menjadi paket dokumen produk</title>
+  <meta name="description" content="Tulis satu kalimat ide, dapatkan berkas prd.md, design-system.md, architecture.md, database.md, api-spec.md, roadmap.md, dan tugas-tugas siap eksekusi. Semua berjalan di peramban Anda.">
+  <meta property="og:title" content="BuildWithAI — paket dokumen produk dari satu kalimat">
+  <meta property="og:description" content="Dari satu kalimat ide menjadi PRD, sistem desain, arsitektur, skema basis data, spesifikasi API, roadmap, dan daftar tugas.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080a0f">
+</head>
+<body>
+  <a class="skip" href="#utama">Lompat ke isi</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark" aria-hidden="true">BW</span>
+        <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="/">Beranda</a>
+        <a href="/ruang-kerja/">Ruang kerja</a>
+        <a href="/template/">Contoh berkas</a>
+        <a href="/panduan/">Panduan</a>
+      </nav>
+      <div class="head-actions">
+        <a class="btn btn-ghost btn-sm" href="/template/">Lihat contoh</a>
+        <span class="acct-slot" data-account-slot></span>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Buka menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-top">
+          <h1>Satu kalimat ide.<br>Sebelas berkas yang <em>siap dikerjakan</em>.</h1>
+          <div class="hero-aside">
+            <span class="stamp">tanpa akun, tanpa server</span>
+            <div class="facts">
+              <span><b>11</b> berkas</span>
+              <span><b>8</b> kategori</span>
+              <span><b>0</b> data terkirim</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer" id="tulis">
+          <form class="composer-field" data-idea-form novalidate>
+            <label for="ide">Kalimat idemu</label>
+            <textarea class="idea-input" id="ide" name="ide" rows="2"
+              placeholder="aplikasi kasir untuk warung kopi agar penjualan harian dan stok bahan tercatat…"></textarea>
+            <div class="composer-side">
+              <button class="btn btn-primary" type="submit" data-generate>Susun dokumen</button>
+              <span class="composer-meta" data-counter>0 karakter</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="samples" role="group" aria-label="Contoh ide">
+          <span class="lbl">Coba:</span>
+          <button class="chip" type="button" data-sample="Aplikasi kasir untuk warung kopi agar saya bisa mencatat penjualan harian dan stok bahan">Kasir warung</button>
+          <button class="chip" type="button" data-sample="Website kursus bahasa Inggris dengan kelas berurutan, tugas, dan sertifikat">Kursus daring</button>
+          <button class="chip" type="button" data-sample="Aplikasi pencatat keuangan bulanan untuk usaha kecil dengan laporan arus kas">Catat keuangan</button>
+          <button class="chip" type="button" data-sample="Sistem booking teknisi AC untuk melacak jadwal kunjungan dan bukti servis">Booking teknisi</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" aria-label="Berkas yang dihasilkan">
+      <div class="bundle">
+        <div class="bundle-head">
+          <span>Berkas</span>
+          <span>Isi</span>
+          <span class="u-right">Bagian</span>
+        </div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>prd.md</span><span class="fd">masalah, tujuan, fitur P0–P2, risiko, pertanyaan terbuka</span><span class="fs num">10</span></div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>design-system.md</span><span class="fd">token warna, tipografi, jarak, komponen, aksesibilitas</span><span class="fs num">10</span></div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>architecture.md</span><span class="fd">tumpukan, diagram, batas modul, keamanan</span><span class="fs num">11</span></div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>database.md</span><span class="fd">DDL SQL, hubungan tabel, indeks, migrasi</span><span class="fs num">6</span></div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>api-spec.md</span><span class="fd">endpoint, contoh permintaan, kode galat, batas laju</span><span class="fs num">7</span></div>
+        <div class="bundle-row"><span class="fn"><span class="lead-mark" aria-hidden="true">—</span>tasks.md</span><span class="fd">daftar kotak centang per area kerja</span><span class="fs num">8</span></div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Cara kerjanya</h2>
+          <p class="note">Kalimat Anda dibaca untuk mengenali jenis produknya, lalu isi tiap berkas diambil dari paket pengetahuan untuk kategori itu.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Tulis idemu</h3>
+            <p>Satu kalimat bebas. Sebutkan siapa penggunanya dan apa yang ingin dicapai.</p>
+          </div>
+          <div class="step">
+            <h3>Kategori dikenali</h3>
+            <p>Kata kunci menentukan aktor, fitur, entitas data, endpoint, dan metrik yang dipakai.</p>
+          </div>
+          <div class="step">
+            <h3>Berkasnya diunduh</h3>
+            <p>Baca di ruang kerja, salin satu berkas, atau unduh semuanya sebagai ZIP untuk masuk repositori.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Delapan kategori, isi yang berbeda</h2>
+          <p class="note">Bukan templat kosong. Tiap kategori membawa peran, tabel, dan metrik yang memang dipakai di bidangnya. Klik untuk mencoba.</p>
+        </div>
+        <div class="index-grid">
+          <button class="index-item" data-domain-pick="Aplikasi kasir dan toko daring untuk mencatat penjualan, mengelola stok, dan memproses pesanan">
+            <span class="nm">E-commerce &amp; marketplace</span><span class="ob">toko · pesanan · stok</span>
+          </button>
+          <button class="index-item" data-domain-pick="Alat manajemen proyek untuk tim kecil dengan tugas, peran anggota, dan riwayat perubahan">
+            <span class="nm">SaaS &amp; alat kerja</span><span class="ob">tim · peran · paket</span>
+          </button>
+          <button class="index-item" data-domain-pick="Website kursus daring dengan materi berurutan, tugas, penilaian, dan sertifikat">
+            <span class="nm">Pendidikan &amp; kursus</span><span class="ob">kelas · tugas · sertifikat</span>
+          </button>
+          <button class="index-item" data-domain-pick="Sistem pendaftaran pasien dan jadwal konsultasi klinik dengan catatan medis dan resep">
+            <span class="nm">Kesehatan &amp; klinik</span><span class="ob">pasien · jadwal · resep</span>
+          </button>
+          <button class="index-item" data-domain-pick="Aplikasi pencatatan keuangan dan anggaran bulanan untuk usaha kecil dengan laporan">
+            <span class="nm">Keuangan &amp; pencatatan</span><span class="ob">kas · anggaran · laporan</span>
+          </button>
+          <button class="index-item" data-domain-pick="Platform komunitas untuk menerbitkan artikel dan berdiskusi dengan moderasi">
+            <span class="nm">Komunitas &amp; konten</span><span class="ob">tulisan · komentar · moderasi</span>
+          </button>
+          <button class="index-item" data-domain-pick="Sistem penugasan teknisi lapangan untuk jadwal kunjungan, status, dan bukti servis">
+            <span class="nm">Logistik &amp; operasional</span><span class="ob">tugas · status · bukti</span>
+          </button>
+          <button class="index-item" data-domain-pick="Aplikasi catatan pribadi dan daftar tugas harian dengan label dan pengingat">
+            <span class="nm">Produktivitas pribadi</span><span class="ob">catatan · kebiasaan · tinjauan</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Yang biasanya dilewatkan</h2>
+          <p class="note">Bukan karena tim malas, tetapi karena menulisnya membosankan. Ini titik awal, bukan hasil akhir.</p>
+        </div>
+        <div class="note-block">
+          <div class="note-item">
+            <h3>Lingkup jadi terlihat</h3>
+            <p>Fitur dipisah P0, P1, P2 lengkap dengan daftar di luar lingkup. Perdebatan "ini masuk atau tidak" punya rujukan tertulis.</p>
+          </div>
+          <div class="note-item">
+            <h3>Data dan API nyambung</h3>
+            <p>Tabel di skema basis data dan endpoint di spesifikasi API saling merujuk, bukan dua dokumen yang berbeda isi.</p>
+          </div>
+          <div class="note-item">
+            <h3>Desain punya angka</h3>
+            <p>Warna, ukuran huruf, jarak, radius, dan keadaan komponen ditulis sebagai token, siap dipindah ke CSS.</p>
+          </div>
+          <div class="note-item">
+            <h3>Siap untuk asisten AI</h3>
+            <p>Daftar tugas berbentuk kotak centang per area, dalam ukuran yang bisa dikerjakan satu per satu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="cta-row">
+          <div>
+            <h2>Punya ide yang masih setengah jadi?</h2>
+            <p>Tidak perlu rapi. Satu kalimat sudah cukup untuk mulai menyusun.</p>
+          </div>
+          <a class="btn btn-primary" href="#tulis">Susun dokumen sekarang</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="/">
+          <span class="mark" aria-hidden="true">BW</span>
+          <span>BuildWithAI<span class="sub">paket dokumen produk</span></span>
+        </a>
+        <p class="foot-note">Alat bantu penyusunan dokumen produk. Semua pemrosesan berjalan di peramban Anda.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Produk</h4>
+          <a href="/ruang-kerja/">Ruang kerja</a>
+          <a href="/template/">Contoh berkas</a>
+          <a href="/panduan/">Panduan</a>
+        </div>
+        <div class="foot-col">
+          <h4>Berkas</h4>
+          <a href="/template/">prd.md</a>
+          <a href="/template/">architecture.md</a>
+          <a href="/template/">api-spec.md</a>
+        </div>
+        <div class="foot-col">
+          <h4>Lainnya</h4>
+          <a href="/panduan/#privasi">Privasi</a>
+          <a href="/panduan/#batasan">Batasan</a>
+          <a href="/panduan/#istilah">Istilah</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
